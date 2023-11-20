@@ -27,12 +27,6 @@ class DBManager(metaclass=Singleton):
         self.session.add(model)
         self.session.commit()
 
-    # def add_balans(self, usdt,bnb):
-    #     new_row = Balans(date=dt.now().date(),
-    #                      balans_usdt=usdt,
-    #                      balans_bnb=bnb)
-    #     self.session.add(new_row)
-    #     self.session.commit()
 
     def del_row_(self, row):
         self.session.delete(row)
@@ -42,8 +36,8 @@ class DBManager(metaclass=Singleton):
         self.session.query(model).delete()
         self.session.commit()
 
-    def get_link(self, target_link):
-        return self.session.query(ProductCard).filter_by(link=target_link).first()
+    def get_link(self, link):
+        return self.session.query(ProductCard).filter_by(link=link).first()
 
     # def get_online_status(self, status):
     #     return self.session.query(OnlineTrade).filter_by(status=status).all()

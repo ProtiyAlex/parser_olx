@@ -8,7 +8,13 @@ FILENAME_LOG = os.path.join(BASE_DIR, "log.txt")
 
 # _________________________________________________
 GLOBAL_LINK = 'https://www.olx.ua'
-ITER_LINK = ['/list/q-', '?search%5Bfilter_float_price:from%5D=','&search%5Bfilter_float_price:to%5D=']
+ITER_LINK = ['/list/q-',
+             '?search%5Bfilter_float_price:from%5D=',
+             '&search%5Bfilter_float_price:to%5D=',
+             "?page=",
+             '&search%5Bfilter_float_price%3Afrom%5D=',
+             '&search%5Bfilter_float_price%3Ato%5D='
+             ]
 
 
 # 10000&search%5Bfilter_float_price:to%5D=100000

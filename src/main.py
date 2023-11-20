@@ -10,7 +10,8 @@ from core.parser import Parser
 if __name__ == '__main__':
     try:
 
-        bot = Parser().run()
+        bot = Parser()
+        bot.start()
 
     except Exception as e:
         logger.error(f"Reload Bot Parser. Error {e}")
